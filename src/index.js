@@ -2,7 +2,9 @@ import * as React from 'react';
 import autobind from 'auto-bind';
 
 import {
-  Button
+  Button,
+
+  CardBlock
 } from 'reactstrap';
 
 import {
@@ -33,10 +35,12 @@ export class ExamplePlugin extends React.Component {
         title="Example Plugin"
         xs={12} sm={12} md={6}
       >
-        <p>
-          Ticks: <strong>{this.props.ticks}</strong>
-        </p>
-        <Button onClick={this._ping}>Ping to Console</Button>
+        <CardBlock>
+          <p>
+            Ticks: <strong>{this.props.ticks}</strong>
+          </p>
+          <Button onClick={this._ping}>Ping to Console</Button>
+        </CardBlock>
       </Toolbox.DashboardPluginBody>
     );
   }
